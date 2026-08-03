@@ -18,7 +18,14 @@
  * 2. Register it in @theme inline as --color-<name>: var(--<name>)
  */
 
+@theme {
+  --font-display: "Unbounded", system-ui, sans-serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+}
+
 @theme inline {
+  --color-accent-from: var(--accent-from);
+  --color-accent-to: var(--accent-to);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -63,8 +70,13 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --background: oklch(0.965 0.002 250);
+  --foreground: oklch(0.18 0.012 260);
+  --accent-from: oklch(0.55 0.19 268);
+  --accent-to: oklch(0.68 0.15 200);
+  --gradient-accent: linear-gradient(100deg, var(--accent-from), var(--accent-to));
+  --emboss-light: oklch(1 0 0 / 0.95);
+  --emboss-dark: oklch(0.52 0.01 260 / 0.35);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
@@ -141,4 +153,23 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+@utility text-emboss {
+  color: color-mix(in oklab, var(--background) 92%, var(--foreground));
+  text-shadow:
+    -1px -1px 1px var(--emboss-light),
+    -3px -3px 6px var(--emboss-light),
+    2px 3px 5px var(--emboss-dark),
+    6px 8px 18px var(--emboss-dark);
+}
+
+@utility text-gradient-accent {
+  background-image: var(--gradient-accent);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-accent {
+  background-image: var(--gradient-accent);
 }
