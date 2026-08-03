@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 const LETTERS = [
   { char: "V", className: "col-start-1 row-start-1 justify-self-start" },
-  { char: "C", className: "col-start-2 row-start-1 justify-self-end" },
+  { char: "I", className: "col-start-2 row-start-1 justify-self-end" },
   { char: "B", className: "col-start-1 row-start-2 justify-self-start" },
   { char: "E", className: "col-start-2 row-start-2 justify-self-end" },
 ];
