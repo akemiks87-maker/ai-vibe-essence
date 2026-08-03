@@ -57,7 +57,7 @@ export function Hero() {
       {/* Выдавленные буквы фона */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 mx-auto grid max-w-6xl grid-cols-2 grid-rows-2 items-center px-4 opacity-70 transition-transform duration-700 ease-out sm:px-12"
+        className="pointer-events-none absolute inset-0 -z-10 mx-auto grid max-w-6xl grid-cols-2 grid-rows-2 items-center px-4 opacity-40 transition-transform sm:opacity-70 duration-700 ease-out sm:px-12"
         style={{
           transform:
             "translate3d(calc(var(--mx) * -14px), calc(var(--my) * -14px), 0)",
@@ -67,7 +67,7 @@ export function Hero() {
           <span
             key={char}
             className={`text-emboss font-display font-black leading-none ${className}`}
-            style={{ fontSize: "clamp(5rem, 20vw, 17rem)" }}
+            style={{ fontSize: "clamp(4rem, 19vw, 17rem)" }}
           >
             {char}
           </span>
