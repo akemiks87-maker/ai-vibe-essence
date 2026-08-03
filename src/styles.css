@@ -154,3 +154,22 @@
     color: var(--color-foreground);
   }
 }
+
+@utility text-emboss {
+  color: color-mix(in oklab, var(--background) 92%, var(--foreground));
+  text-shadow:
+    -1px -1px 1px var(--emboss-light),
+    -3px -3px 6px var(--emboss-light),
+    2px 3px 5px var(--emboss-dark),
+    6px 8px 18px var(--emboss-dark);
+}
+
+@utility text-gradient-accent {
+  background-image: var(--gradient-accent);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-accent {
+  background-image: var(--gradient-accent);
+}
