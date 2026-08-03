@@ -40,7 +40,7 @@ export function Hero() {
     <section
       ref={sectionRef}
       style={{ "--mx": 0, "--my": 0 } as React.CSSProperties}
-      className="relative isolate overflow-hidden bg-background px-6 py-20 sm:px-10 sm:py-28 lg:py-32"
+      className="relative isolate flex min-h-screen items-center overflow-hidden bg-background px-6 py-20 sm:px-10 sm:py-28"
     >
       {/* Мягкое градиентное свечение, следящее за курсором */}
       <div
