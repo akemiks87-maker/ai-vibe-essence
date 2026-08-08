@@ -1,11 +1,5 @@
 import { useEffect, useRef } from "react";
-
-const LETTERS = [
-  { char: "V", className: "col-start-1 row-start-1 justify-self-start" },
-  { char: "I", className: "col-start-2 row-start-1 justify-self-end" },
-  { char: "B", className: "col-start-1 row-start-2 justify-self-start" },
-  { char: "E", className: "col-start-2 row-start-2 justify-self-end" },
-];
+import splash from "@/assets/hero-splash.jpg";
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -42,37 +36,29 @@ export function Hero() {
       style={{ "--mx": 0, "--my": 0 } as React.CSSProperties}
       className="relative isolate flex min-h-screen items-center overflow-hidden bg-background px-6 py-20 sm:px-10 sm:py-28"
     >
-      {/* Мягкое градиентное свечение, следящее за курсором */}
+      {/* Размытая картинка цветных брызг, реагирует на курсор */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-20 transition-transform duration-500 ease-out"
         style={{
           transform:
-            "translate3d(calc(var(--mx) * 28px), calc(var(--my) * 28px), 0) scale(1.1)",
-          background:
-            "radial-gradient(45rem 45rem at 30% 25%, color-mix(in oklab, var(--accent-from) 16%, transparent), transparent 65%), radial-gradient(38rem 38rem at 78% 70%, color-mix(in oklab, var(--accent-to) 16%, transparent), transparent 62%)",
-        }}
-      />
-
-      {/* Выдавленные буквы фона */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 mx-auto grid max-w-6xl grid-cols-2 grid-rows-2 items-center px-4 opacity-40 transition-transform sm:opacity-70 duration-700 ease-out sm:px-12"
-        style={{
-          transform:
-            "translate3d(calc(var(--mx) * -14px), calc(var(--my) * -14px), 0)",
+            "translate3d(calc(var(--mx) * 32px), calc(var(--my) * 32px), 0) scale(1.15)",
         }}
       >
-        {LETTERS.map(({ char, className }) => (
-          <span
-            key={char}
-            className={`text-emboss font-display font-black leading-none ${className}`}
-            style={{ fontSize: "clamp(4rem, 19vw, 17rem)" }}
-          >
-            {char}
-          </span>
-        ))}
+        <img
+          src={splash}
+          alt=""
+          width={1920}
+          height={1280}
+          className="h-full w-full object-cover opacity-70 blur-2xl sm:blur-3xl"
+        />
       </div>
+
+      {/* Затемнение для читаемости текста */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 bg-background/55"
+      />
 
       <div className="relative mx-auto flex max-w-6xl flex-col items-center text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground">
@@ -101,7 +87,7 @@ export function Hero() {
           </a>
           <a
             href="#contact"
-            className="inline-flex h-12 w-full items-center justify-center rounded-full border border-foreground/15 bg-background/70 px-8 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:bg-accent focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none sm:w-auto"
+            className="bg-gradient-accent inline-flex h-12 w-full items-center justify-center rounded-full px-8 text-sm font-semibold text-primary-foreground shadow-lg transition-transform hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none sm:w-auto"
           >
             Связаться
           </a>
