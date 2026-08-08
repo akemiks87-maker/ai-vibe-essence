@@ -48,37 +48,33 @@ export function Projects() {
             return (
               <article
                 key={project.id}
-                className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/5 sm:p-6"
+                className="group flex flex-row gap-5 overflow-hidden rounded-3xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/5 sm:gap-6 sm:p-6"
               >
-                {/* Превью-плейсхолдер */}
-                <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-accent sm:mb-6">
-                  <div className="absolute inset-0 bg-[linear-gradient(145deg,oklch(1_0_0/0.16),oklch(1_0_0/0)_60%)]" />
-                  <div className="absolute inset-0 grid place-items-center">
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-background/20 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 sm:h-14 sm:w-14">
-                      <Icon className="h-6 w-6 text-primary-foreground sm:h-7 sm:w-7" />
-                    </div>
+                {/* Иконка — увеличена и анимирована */}
+                <div className="flex-shrink-0">
+                  <div className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-accent shadow-lg shadow-primary/20 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-primary/40 sm:h-16 sm:w-16">
+                    <Icon className="h-7 w-7 animate-icon-float text-primary-foreground sm:h-8 sm:w-8" />
                   </div>
                 </div>
 
-                {/* Контент */}
+                {/* Контент рядом с иконкой */}
                 <div className="flex flex-1 flex-col">
                   <h3 className="font-display text-lg font-bold tracking-tight text-foreground sm:text-xl">
                     {project.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:mt-3">
                     {project.description}
                   </p>
 
                   {/* Подпись в стиле референса */}
-                  <div className="mt-6 pt-4 sm:mt-7">
+                  <div className="mt-4 sm:mt-5">
                     <span className="inline-flex items-center rounded-full bg-secondary/50 px-3 py-1.5 text-xs font-semibold text-gradient-accent">
                       {project.caption}
                     </span>
                   </div>
                 </div>
               </article>
-
             );
           })}
         </div>
