@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import splash from "@/assets/hero-splash.jpg";
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -34,31 +33,14 @@ export function Hero() {
     <section
       ref={sectionRef}
       style={{ "--mx": 0, "--my": 0 } as React.CSSProperties}
-      className="relative isolate flex min-h-screen items-center overflow-hidden bg-background px-6 py-20 sm:px-10 sm:py-28"
+      className="relative isolate flex min-h-screen items-center overflow-hidden px-6 py-20 sm:px-10 sm:py-28"
     >
-      {/* Размытая картинка цветных брызг, реагирует на курсор */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-20 transition-transform duration-500 ease-out"
-        style={{
-          transform:
-            "translate3d(calc(var(--mx) * 32px), calc(var(--my) * 32px), 0) scale(1.15)",
-        }}
-      >
-        <img
-          src={splash}
-          alt=""
-          width={1920}
-          height={1280}
-          className="h-full w-full object-cover opacity-70 blur-2xl sm:blur-3xl"
-        />
-      </div>
-
       {/* Затемнение для читаемости текста */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-background/55"
       />
+
 
       <div className="relative mx-auto flex max-w-6xl flex-col items-center text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground">
