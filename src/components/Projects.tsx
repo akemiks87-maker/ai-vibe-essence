@@ -6,29 +6,27 @@ const projects = [
     title: "StudyFlow",
     description:
       "AI-платформа для персонализированного обучения. Адаптирует план, материалы и темп под цели каждого ученика.",
-    tags: ["React", "OpenAI", "PostgreSQL", "Tailwind"],
     icon: GraduationCap,
-    highlight: "Персонализация",
+    caption: "Персонализация × Результат",
   },
   {
     id: "neuroanalyst",
     title: "НейроАналитик",
     description:
       "AI-сервис для анализа данных. Превращает сырые данные в понятные инсайты, отчёты и прогнозы.",
-    tags: ["Python", "FastAPI", "Pandas", "LLM"],
     icon: BrainCircuit,
-    highlight: "Инсайты",
+    caption: "Данные × Инсайты",
   },
   {
     id: "launchpro",
     title: "LaunchPro",
     description:
       "Лендинг для продукта. Быстрая посадочная страница с конверсионной структурой и гибкой CMS.",
-    tags: ["Next.js", "Framer", "Stripe", "Vercel"],
     icon: Rocket,
-    highlight: "Конверсия",
+    caption: "Дизайн × Конверсия",
   },
 ];
+
 
 export function Projects() {
   return (
