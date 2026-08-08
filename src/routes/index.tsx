@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
+import { Projects } from "@/components/Projects";
 
 const title = "Вайбкодинг: AI-продукты и MVP под ключ";
 const description =
@@ -23,6 +24,8 @@ function Index() {
   return (
     <main className="min-h-screen bg-background font-sans">
       <Hero />
+      <Projects />
     </main>
   );
 }
+
