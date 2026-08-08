@@ -32,7 +32,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative scroll-mt-16 bg-background px-6 py-24 sm:px-10 sm:py-32"
+      className="relative scroll-mt-16 bg-background/70 px-6 py-24 sm:px-10 sm:py-32"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 flex items-center gap-3 sm:mb-16">
