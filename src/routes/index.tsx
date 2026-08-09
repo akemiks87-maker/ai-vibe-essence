@@ -54,7 +54,7 @@ function BlurredBackground() {
     <div
       ref={wrapperRef}
       aria-hidden
-      className="fixed inset-0 -z-50 overflow-hidden"
+      className="fixed inset-0 -z-50 overflow-hidden bg-background"
       style={{ "--mx": 0, "--my": 0 } as React.CSSProperties}
     >
       <img
@@ -62,13 +62,14 @@ function BlurredBackground() {
         alt=""
         width={1920}
         height={1280}
-        className="h-full w-full object-cover opacity-70 blur-2xl sm:blur-3xl"
+        className="h-full w-full object-cover opacity-50 blur-3xl sm:blur-[80px]"
         style={{
           transform:
-            "translate3d(calc(var(--mx) * 32px), calc(var(--my) * 32px), 0) scale(1.15)",
-          transition: "transform 500ms ease-out",
+            "translate3d(calc(var(--mx) * 20px), calc(var(--my) * 20px), 0) scale(1.35)",
+          transition: "transform 600ms ease-out",
         }}
       />
+      <div className="absolute inset-0 bg-background/65" />
     </div>
   );
 }
