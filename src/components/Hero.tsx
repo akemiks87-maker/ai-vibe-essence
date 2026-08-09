@@ -35,6 +35,7 @@ export function Hero() {
       style={{ "--mx": 0, "--my": 0 } as React.CSSProperties}
       className="relative isolate flex min-h-screen items-center overflow-hidden px-6 py-20 sm:px-10 sm:py-28"
     >
+      <div className="relative mx-auto flex max-w-6xl flex-col items-center text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground">
           Vibecoding &middot; AI Products
         </p>
