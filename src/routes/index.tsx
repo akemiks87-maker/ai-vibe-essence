@@ -81,6 +81,7 @@ function Index() {
       <BlurredBackground />
       <Hero />
       <Projects />
+      <Process />
     </main>
   );
 }
