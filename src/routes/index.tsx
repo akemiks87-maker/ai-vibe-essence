@@ -85,6 +85,7 @@ function Index() {
       <Projects />
       <Services />
       <Process />
+      <CTA />
     </main>
   );
 }
