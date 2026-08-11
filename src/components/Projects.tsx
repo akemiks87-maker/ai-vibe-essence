@@ -11,7 +11,7 @@ const projects = [
   },
   {
     id: "neuroanalyst",
-    title: "НейроАналитик",
+    title: "Нейро Аналитик",
     description:
       "AI-сервис для анализа данных. Превращает сырые данные в понятные инсайты, отчёты и прогнозы.",
     icon: BrainCircuit,
