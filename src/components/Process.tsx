@@ -48,7 +48,7 @@ export function Process() {
             {steps.map((step) => (
               <article
                 key={step.id}
-                className="group flex flex-col items-start text-left"
+                className="group flex flex-col items-center"
               >
                 {/* Number badge on timeline */}
                 <div className="relative z-10 mb-6 grid h-16 w-16 place-items-center rounded-2xl border border-border bg-card shadow-lg shadow-primary/5 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-primary/30 group-hover:shadow-primary/15">
@@ -57,13 +57,15 @@ export function Process() {
                   </span>
                 </div>
 
-                <h3 className="font-display text-lg font-bold tracking-tight text-foreground sm:text-xl">
-                  {step.title}
-                </h3>
+                <div className="w-full text-left">
+                  <h3 className="font-display text-lg font-bold tracking-tight text-foreground sm:text-xl">
+                    {step.title}
+                  </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {step.description}
-                </p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {step.description}
+                  </p>
+                </div>
               </article>
             ))}
           </div>
