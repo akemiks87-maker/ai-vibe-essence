@@ -42,13 +42,13 @@ export function Process() {
         {/* Desktop: horizontal timeline */}
         <div className="relative hidden lg:block">
           {/* Horizontal connector line */}
-          <div className="absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+          <div className="absolute top-8 left-0 right-0 h-[1.2px] bg-gradient-to-r from-transparent via-border to-transparent" />
 
           <div className="relative grid grid-cols-4 gap-8">
             {steps.map((step) => (
               <article
                 key={step.id}
-                className="group flex flex-col items-center text-center"
+                className="group flex flex-col items-start text-left"
               >
                 {/* Number badge on timeline */}
                 <div className="relative z-10 mb-6 grid h-16 w-16 place-items-center rounded-2xl border border-border bg-card shadow-lg shadow-primary/5 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-primary/30 group-hover:shadow-primary/15">
