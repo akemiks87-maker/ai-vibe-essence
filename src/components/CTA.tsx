@@ -1,8 +1,7 @@
 import { Send, Mail } from "lucide-react";
 
-// Замените на свои контакты
-const TELEGRAM_LINK = "https://t.me/your_username";
-const EMAIL_LINK = "mailto:hello@example.com";
+const TELEGRAM_LINK = "https://t.me/akemiks87";
+const EMAIL_LINK = "mailto:akemiks@mail.ru";
 
 export function CTA() {
   return (
