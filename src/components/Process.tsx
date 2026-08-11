@@ -72,13 +72,13 @@ export function Process() {
         {/* Mobile + tablet: vertical timeline */}
         <div className="relative lg:hidden">
           {/* Vertical connector line */}
-          <div className="absolute left-7 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-border to-transparent" />
+          <div className="absolute left-7 top-0 bottom-0 w-[1.2px] bg-gradient-to-b from-transparent via-border to-transparent" />
 
           <div className="relative space-y-8">
             {steps.map((step) => (
               <article
                 key={step.id}
-                className="group flex items-start gap-5"
+                className="group flex items-start gap-5 text-left"
               >
                 {/* Number badge on timeline */}
                 <div className="relative z-10 grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-border bg-card shadow-lg shadow-primary/5 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-primary/30 group-hover:shadow-primary/15">
